@@ -1,53 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.1 (30/4/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[]{resume-openfont}
-
-\title{AndreLaFleurResume}
-
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,10 +18,9 @@
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\namesection{Andre}{LaFleur}{ \urlstyle{same}\url{http://github.com/cincospenguinos} \\
-\href{mailto:cincospenguinos@gmail.com}{cincospenguinos@gmail.com} | 801.205.3179
+\namesection{Andre}{LaFleur}{
+    \urlstyle{same}\url{http://github.com/cincospenguinos} \\
+    \href{mailto:cincospenguinos@gmail.com}{cincospenguinos@gmail.com} | 801.205.3179
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,7 +35,7 @@
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education} 
+\section{Education}
 
 \subsection{University of Utah}
 \descript{BS in Computer Science}
@@ -93,8 +48,8 @@
 
 \section{Links} 
 Github: \href{https://github.com/cincospenguinos}{\custombold{cincospenguinos}} \\
-Blog: \href{https://cincospenguinos.github.io/blog}{\custombold{cincospenguinos}}
-% LinkedIn://  \href{https://www.linkedin.com/in/debarghyadas}{\custombold{debarghyadas}} \\ % TODO: LinkedIn
+Website: \href{https://andrelafleur.io}{\custombold{Andre LaFleur}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/andre-lafleur-a4107a102/}{\custombold{Andre LaFleur}} \\
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,6 +62,7 @@ Information Extraction \\
 Advanced Algorithms \\
 Data Visualization for Data Science \\
 Computer Organization \\
+Digital Humanities \\
 \sectionsep
 
 \subsection{Undergraduate}
@@ -134,12 +90,12 @@ CSS \textbullet{} Golang \\
 Git \textbullet{} Rails \textbullet{} MySQL \textbullet{} \\
 PostgreSQL \textbullet{} Linux \textbullet{} Docker \textbullet{} \\ 
 Docker Compose \textbullet{} Android \textbullet{} AWS \textbullet{} Heroku \textbullet{} 
-React \textbullet{} Phoenix \\
+React \\
 \sectionsep
 
 \subsection{Processes \& Practices}
 Scrum \textbullet{} Extreme Programming \textbullet{} Test-Driven Development \textbullet{} \\
-Domain-Driven Design \\
+Domain-Driven Design \textbullet{} Agile \\
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,47 +115,38 @@ Domain-Driven Design \\
 \section{Experience}
 
 \runsubsection{Techcyte}
-\descript{| Software Engineer }
-\location{Mar 2021 - | Salt Lake City, UT }
+\descript{| Senior Software Engineer }
+\location{Mar 2021 - Sept 2025 | Salt Lake City, UT}
 \vspace{\topsep}
 \begin{tightemize}
-    \item Create and maintain internal library interfacing with a plethora of image formats for a variety of services of the Techcyte product suite
-    \item Integrate internal library into application code into a variety of microservices through docker
-    \item Track down and resolve memory issues between Golang application code and C/C++ libraries
-    \item Help design and assist training team members on effective use of design patterns and test-driven development practices
-\end{tightemize}
-\sectionsep
-
-\runsubsection{Just Keep Writing! LLC}
-\descript{| CTO and Owner }
-\location{August 2020 - July 2022 | Salt Lake City, UT }
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-	\item Collaborated with business partner to design, create, and maintain a web-app to fill a hole in the market
-    \item Integrated with CircleCI and Heroku to continuously integrate changes and deploy them to production
-    \item Cooperated with a business partner to write user stories, point them, and ensure their timely completion
-    \item Employed the values, principles, and practices of Extreme Programming throughout the development and continued maintenance of the app
+    \item Design, implement, and maintain internal image library interfacing with a plethora of image formats and integrate in services company-wide
+    \item Research, design, implement, and maintain various microservices interfacing with and extracting information from SVS/TIFF, PNG, JPEG, BMP, and DICOM file formats
+    \item Design and implement DICOMWeb REST service to supply arbitrary metadata and pixeldata
+    \item Research, design, and implement microservice maintaining external DICOM archive secrets, ensuring 
+    \item Write and maintain technical documentation describing in concise detail services and APIs consumed by other internal teams
+    \item Foster a positive work culture focused on delivering high quality software that serves customer needs through positive enouragement, timely feedback, and effective use of TDD practices
+    \item Train team members on effective and practical use of design patterns, refactoring patterns, and test-driven development practices
 \end{tightemize}
 \sectionsep
 
 \runsubsection{Mavenlink}
-\descript{| Software Engineer }
-\location{Jan 2019 - Mar 2021 | Salt Lake City, UT }
+\descript{| Software Engineer}
+\location{Jan 2019 - Mar 2021 | Salt Lake City, UT}
 \vspace{\topsep}
 \begin{tightemize}
     \item Incepted, implemented, and supported the Custom Forms project, wherein users are able to design and deploy their own custom forms and UI features within the application
     \item Support ongoing internal and external feature work by creating and maintaining a \href{https://mavenlink.github.io/design-system/master}{public design system}
     \item Developed Single Sign On (SSO) integration with Salesforce using OpenID Connect protocol, leveraging and contributing to open-source projects in the process (OpenID and OpenID Connect gems)
-	\item Incepted, designed, implemented, and supported modal in React to acquire and filter data on the backend with GraphQL
+    \item Incepted, designed, implemented, and supported modal in React to acquire and filter data on the backend with GraphQL
 \end{tightemize}
 \sectionsep
 
 \runsubsection{The Church of Jesus Christ of Latter-Day Saints}
-\descript{| Software Engineering Intern }
-\location{May 2018 - August 2018 | Salt Lake City, UT }
+\descript{| Software Engineering Intern}
+\location{May 2018 - August 2018 | Salt Lake City, UT}
 \vspace{\topsep}
 \begin{tightemize}
-	\item Fixed longstanding bugs in old code base
+    \item Fixed longstanding bugs in old code base
     \item Performed analysis to estimate work required for new features in existing application
     \item Created new on-boarding documentation and improved upon existing documentation for various projects
     \item Design and implement web service using Spring and a new version of an internal framework, LDS Stack
